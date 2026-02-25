@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.nasr.andropseudoprotectpoc"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 👇 مهم جدًا في Android 11+ -->
+    <queries>
+        <package android:name="com.eightksec.andropseudoprotect"/>
+
+        <!-- أو ممكن تحدد السيرفيس مباشرة -->
+        <intent>
+            <action android:name="com.eightksec.andropseudoprotect.START_SECURITY"/>
+        </intent>
+
+        <intent>
+            <action android:name="com.eightksec.andropseudoprotect.STOP_SECURITY"/>
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:label="AndroPseudoProtect PoC"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
